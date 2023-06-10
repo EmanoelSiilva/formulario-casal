@@ -1,15 +1,27 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <form action="">
+    <fieldset>
+      <legend>Adicione um livro aqui</legend>
+      <p>
+        <label for="size_3">Livro:</label> <br>
+        <input type="text" name="size" id="size_3" value="Insira o nome aqui" />
+      </p>
+
+      <p>
+        <input type="submit" @click="submitForm">
+      </p>
+    </fieldset>
+  </form>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  methods: {
+    submitForm() {
+      alert('Enviado')
+    }
   }
 }
 </script>
